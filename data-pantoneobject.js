@@ -1,4 +1,4 @@
-[
+let pantoneSolidCoated = [
 { name: 'White' , color: '#FFFFFF' } ,
 { name: '100C' , color: '#F5EA61' } ,
 { name: '101C' , color: '#F7EA48' } ,
@@ -1341,4 +1341,13 @@
 { name: 'Yellow 012C' , color: '#FFD700' } ,
 { name: 'Yellow 0131C' , color: '#F2F0A1' } ,
 { name: 'YellowC' , color: '#FEDD00' } 
-]
+];
+
+function listSwatches(pantoneSolidCoated) {
+    return `
+<label for='${pantoneSolidCoated.name}'>${pantoneSolidCoated.name}<input type="color" value='${pantoneSolidCoated.color}' /></label>
+    `;
+}
+
+// Inject into DOM with a div
+// document.querySelector('#app').innerHTML = `${pantoneSolidCoated.map(listSwatches).join("")}`;
